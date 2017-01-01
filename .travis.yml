@@ -1,0 +1,11 @@
+language: csharp
+solution: Droid_Web.sln
+mono: latest
+notifications:
+  email: false
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Droid_Web.sln
+after_script:
+  - nunit-console UnitTestProject/lib/4.0/UnitTestProject.dll

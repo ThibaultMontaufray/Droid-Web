@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Droid_Web</id>
+    <version>1.0.0</version>
+    <title>Servodroid.Web</title>
+    <authors>Thibault MONTAUFRAY</authors>
+    <owners>Servodroid</owners>
+    <licenseUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools4Libraries/master/License</licenseUrl>
+    <projectUrl>https://github.com/ThibaultMontaufray/Manager-Web</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools4Libraries/master/ManagersDevComponents/servodroidIconColor.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Format your .net object to be displayed on web. There is also a little web research tool, but not very efficient.</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>Servodroid web formating research</tags>
+  </metadata>
+  <files>
+    <file src="lib\**\*.dll" target="lib" />
+    <file src="lib\**\*.xml" target="lib" />
+    <file src="lib\**\*.config" target="lib" />
+  </files>
+</package>
