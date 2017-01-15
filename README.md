@@ -1,12 +1,12 @@
-# Manager Web [![Official Site](https://img.shields.io/badge/site-servodroid.com-orange.svg)](http://servodroid.com)
+# Droid Web [![Official Site](https://img.shields.io/badge/site-servodroid.com-orange.svg)](http://servodroid.com)
 
 Parsing all sentenses with vocabulary and times. XML file with almost french words. You can add your own database to have your words.
 
 [![Version Status](https://img.shields.io/nuget/v/Droid_Web.svg)](https://www.nuget.org/packages/Droid_Web/)
 [![License](https://img.shields.io/github/license/brandondahler/Data.HashFunction.svg)](https://raw.githubusercontent.com/ThibaultMontaufray/Tools4Libraries/master/License)
-[![Build Status](https://travis-ci.org/ThibaultMontaufray/Manager-web.svg?branch=master)](https://travis-ci.org/ThibaultMontaufray/Manager-web) 
-[![Build status](https://ci.appveyor.com/api/projects/status/43gl0psxbowev4tu?svg=true)](https://ci.appveyor.com/project/ThibaultMontaufray/Manager-web)
-[![Coverage Status](https://coveralls.io/repos/github/ThibaultMontaufray/Manager-Web/badge.svg?branch=master)](https://coveralls.io/github/ThibaultMontaufray/Manager-Web?branch=master)
+[![Build Status](https://travis-ci.org/ThibaultMontaufray/Droid-web.svg?branch=master)](https://travis-ci.org/ThibaultMontaufray/Droid-web) 
+[![Build status](https://ci.appveyor.com/api/projects/status/43gl0psxbowev4tu?svg=true)](https://ci.appveyor.com/project/ThibaultMontaufray/Droid-web)
+[![Coverage Status](https://coveralls.io/repos/github/ThibaultMontaufray/Droid-Web/badge.svg?branch=master)](https://coveralls.io/github/ThibaultMontaufray/Droid-Web?branch=master)
 
 # Usage
 
