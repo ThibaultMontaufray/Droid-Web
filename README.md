@@ -5,7 +5,7 @@ Parsing all sentenses with vocabulary and times. XML file with almost french wor
 [![Version Status](https://img.shields.io/nuget/v/Droid_Web.svg)](https://www.nuget.org/packages/Droid_Web/)
 [![License](https://img.shields.io/github/license/brandondahler/Data.HashFunction.svg)](https://raw.githubusercontent.com/ThibaultMontaufray/Tools4Libraries/master/License)
 [![Build Status](https://travis-ci.org/ThibaultMontaufray/Droid-web.svg?branch=master)](https://travis-ci.org/ThibaultMontaufray/Droid-web) 
-[![Build status](https://ci.appveyor.com/project/ThibaultMontaufray/Droid-web)](https://ci.appveyor.com/project/ThibaultMontaufray/Droid-web)
+[![Build status](https://ci.appveyor.com/api/projects/status/ieecknln2usfarpg?svg=true)](https://ci.appveyor.com/project/ThibaultMontaufray/Droid-web)
 [![Coverage Status](https://coveralls.io/repos/github/ThibaultMontaufray/Droid-Web/badge.svg?branch=master)](https://coveralls.io/github/ThibaultMontaufray/Droid-Web?branch=master)
 
 # Usage
