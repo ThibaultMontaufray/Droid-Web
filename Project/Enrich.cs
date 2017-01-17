@@ -24,37 +24,37 @@
         #region Methods public
         public void SaveObject(object obj)
         {
-            List<string> list = obj.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Select(field => field.Name).ToList();
-            string columnsFormat = string.Empty;
-            string values = string.Empty;
-            string update = string.Empty;
-            string currentVal = string.Empty;
-            string currentProp = string.Empty;
+            //List<string> list = obj.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Select(field => field.Name).ToList();
+            //string columnsFormat = string.Empty;
+            //string values = string.Empty;
+            //string update = string.Empty;
+            //string currentVal = string.Empty;
+            //string currentProp = string.Empty;
 
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (list[i].StartsWith("_") || list[i].StartsWith("On") || list[i].Contains("EnrichmentDone"))
-                {
-                    continue;
-                }
-                else
-                {
-                    PropertyInfo propertyInfo = obj.GetType().GetProperty(list[i].Split('>')[0].Split('<')[1]);
-                    if (propertyInfo.GetValue(obj, null) == null) continue;
-                    currentVal =  propertyInfo.GetValue(obj, null).ToString();
-                    currentProp = AttributToColumnName(propertyInfo.Name);
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    if (list[i].StartsWith("_") || list[i].StartsWith("On") || list[i].Contains("EnrichmentDone"))
+            //    {
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        PropertyInfo propertyInfo = obj.GetType().GetProperty(list[i].Split('>')[0].Split('<')[1]);
+            //        if (propertyInfo.GetValue(obj, null) == null) continue;
+            //        currentVal =  propertyInfo.GetValue(obj, null).ToString();
+            //        currentProp = AttributToColumnName(propertyInfo.Name);
 
-                    if (!string.IsNullOrEmpty(columnsFormat)) columnsFormat += ", ";
-                    if (!string.IsNullOrEmpty(values)) values += ", ";
-                    if (!string.IsNullOrEmpty(update)) update += ", ";
+            //        if (!string.IsNullOrEmpty(columnsFormat)) columnsFormat += ", ";
+            //        if (!string.IsNullOrEmpty(values)) values += ", ";
+            //        if (!string.IsNullOrEmpty(update)) update += ", ";
 
-                    columnsFormat += currentProp;
-                    values += "\"" + currentVal + "\"";
-                    update += currentProp + "=\"" + currentVal + "\"";
-                }
-            }
+            //        columnsFormat += currentProp;
+            //        values += "\"" + currentVal + "\"";
+            //        update += currentProp + "=\"" + currentVal + "\"";
+            //    }
+            //}
 
-            Droid_database.MySqlAdapter.ExecuteQuery(string.Format("insert into t_{0} ({1}) values ({2})  on duplicate key update {3}", obj.GetType().ToString().Split('.')[obj.GetType().ToString().Split('.').Length - 1], columnsFormat, values, update));
+            //Droid_database.MySqlAdapter.ExecuteQuery(string.Format("insert into t_{0} ({1}) values ({2})  on duplicate key update {3}", obj.GetType().ToString().Split('.')[obj.GetType().ToString().Split('.').Length - 1], columnsFormat, values, update));
         }
         #endregion
 

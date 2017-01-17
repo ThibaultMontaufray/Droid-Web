@@ -95,6 +95,7 @@
     <Compile Include="Controler\ParserMeteo.cs" />
     <Compile Include="Controler\ParserHumain.cs" />
     <Compile Include="Controler\ParserRecette.cs" />
+    <Compile Include="Controler\ParserSubtitle.cs" />
     <Compile Include="Controler\Web.cs" />
     <Compile Include="Controler\WebSeeker.cs" />
     <Compile Include="Enrich.cs" />

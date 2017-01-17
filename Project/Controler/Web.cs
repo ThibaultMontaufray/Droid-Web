@@ -3,6 +3,7 @@
     using System;
     using System.IO;
     using System.Net;
+    using System.Text.RegularExpressions;
     using System.Web;
     using Tools4Libraries;
     public static class Web
@@ -42,6 +43,13 @@
             var formData = HttpUtility.ParseQueryString(String.Empty);
             _http.Credentials = new NetworkCredential(user, password);
             return GetResult();
+        }
+        public static string GetLucky(string word)
+        {
+            string page = GetPage(string.Format("https://www.google.com/search?q={0}", word));
+            string url = Regex.Split(page, "<h3 class=\"r\"><a href=\"")[1];
+            
+            return GetPage(url);
         }
         #endregion
 
