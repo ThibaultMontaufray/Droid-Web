@@ -9,7 +9,6 @@ namespace Droid_web
     public class ParserSubtitle
     {
         #region Attribute
-        private static string _subtitleWebSite;
         #endregion
 
         #region Properties

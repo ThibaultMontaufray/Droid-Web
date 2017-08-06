@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4DA97551-8F83-4B71-81CA-6971D1D393FD}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Droid_web</RootNamespace>
     <AssemblyName>Droid_web</AssemblyName>
@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controler\GoogleImage.cs" />
     <Compile Include="Controler\HtmlRemoval.cs" />
     <Compile Include="Controler\ObjectToHtml.cs" />
     <Compile Include="Controler\ParserArticle.cs" />

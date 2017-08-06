@@ -14,6 +14,8 @@ namespace Droid_web
         /// </summary>
         static void Main()
         {
+            Web.GetLuckyImage("\"jason mraz\" music artist profile");
+
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {

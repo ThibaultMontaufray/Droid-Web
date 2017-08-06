@@ -1,6 +1,7 @@
 ﻿namespace Droid_web
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Net;
     using System.Text.RegularExpressions;
@@ -47,9 +48,30 @@
         public static string GetLucky(string word)
         {
             string page = GetPage(string.Format("https://www.google.com/search?q={0}", word));
+            _http.Abort();
             string url = Regex.Split(page, "<h3 class=\"r\"><a href=\"")[1];
-            
+
+            url = Regex.Split(url, "=")[1];
+            url = Regex.Split(url, "&amp;")[0];
+
             return GetPage(url);
+        }
+        public static string GetFile(string url)
+        {
+            using (var client = new WebClient())
+            {
+                client.DownloadFile(url, System.IO.Path.GetFileName(url));
+            }
+            return string.Empty;
+        }
+        public static string GetLuckyImage(string keyWord)
+        {
+            List<string> urls = GetImages(keyWord);
+            return urls.Count > 0 ? urls[0] : null;
+        }
+        public static List<string> GetImages(string keyWord)
+        {
+            return GoogleImage.GetUrls(GoogleImage.GetHtmlCode(keyWord));
         }
         #endregion
 
@@ -70,14 +92,24 @@
         private static string GetResult()
         {
             string retVal = string.Empty;
-            HttpWebResponse response = _http.GetResponse() as HttpWebResponse;
-            if (response.StatusCode == HttpStatusCode.OK)
+            try
             {
-                Stream dataStream = response.GetResponseStream();
-                StreamReader reader = new StreamReader(dataStream);
-                retVal = reader.ReadToEnd();
+                HttpWebResponse response = _http.GetResponse() as HttpWebResponse;
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    Stream dataStream = response.GetResponseStream();
+                    StreamReader reader = new StreamReader(dataStream);
+                    retVal = reader.ReadToEnd();
+                }
+                response.Close();
             }
-            response.Close();
+            catch (WebException exp)
+            {
+                using (var sr = new StreamReader(exp.Response.GetResponseStream()))
+                { 
+                    retVal = sr.ReadToEnd();
+                }
+            }
             return retVal;
         }
         #endregion
