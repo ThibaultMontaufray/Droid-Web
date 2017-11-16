@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Net;
+    using System.Net.NetworkInformation;
     using System.Text.RegularExpressions;
     using System.Web;
     using Tools4Libraries;
@@ -18,6 +19,22 @@
         #endregion
 
         #region Methods public
+        public static bool IsInternetAlive()
+        {
+            bool _online = false;
+            try
+            {
+                Ping ping = new Ping();
+                PingReply pr = ping.Send("www.google.fr");
+
+                _online = pr.Status == IPStatus.Success;
+            }
+            catch
+            {
+                _online = false;
+            }
+            return _online;
+        }
         public static string GetPage(string url, string serviceUserName, string servicePassword)
         {
             PrepareHttp(url);
