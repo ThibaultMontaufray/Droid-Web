@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
+    <Version>1.0.5</Version>
+    <Authors>Thibault MONTAUFRAY</Authors>
+    <Company>Servodroid</Company>
+    <Description>Format your .net object to be displayed on web. There is also a little web research tool, but not very efficient.</Description>
+    <Copyright>Copyright 2015 - 2019</Copyright>
+    <PackageIconUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools/master/Tools.Data/servodroidIconColor.png</PackageIconUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools/Tools.Data/master/License</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ThibaultMontaufray/Droid-Web</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ThibaultMontaufray/Droid-Web</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>Servodroid web formating research</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Scripts\jquery-2.1.1.intellisense.js" />
+    <None Remove="Scripts\jquery-2.1.1.js" />
+    <None Remove="Scripts\jquery-2.1.1.min.js" />
+    <None Remove="Scripts\nugetexample.js" />
+    <None Remove="Scripts\ScriptDropDown.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+    <Content Include="Scripts\ScriptDropDown.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LinqToWiki" Version="1.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

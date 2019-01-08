@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.3.3497.1841\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.3.3497.1841\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.3.3497.1841\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.3.3497.1841\build\cef.redist.x64.props')" />
+  <Import Project="..\..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props" Condition="Exists('..\..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.props')" />
+  <Import Project="..\..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props" Condition="Exists('..\..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.props')" />
+  <Import Project="..\..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props" Condition="Exists('..\..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" />
+  <Import Project="..\..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props" Condition="Exists('..\..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F403985-3764-4023-A511-09662FE2F746}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Droid.Web.UI</RootNamespace>
+    <AssemblyName>Droid.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>TobiAppliKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TobiProject|AnyCPU'">
+    <OutputPath>bin\TobiProject\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Droid|AnyCPU'">
+    <OutputPath>bin\Droid\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TobiProject|AnyCPU'">
+    <OutputPath>bin\TobiProject\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TobiProject|x86'">
+    <OutputPath>bin\x86\TobiProject\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Droid|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>lib\4.6.1\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChannelAdam.Soap, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChannelAdam.Soap.2.0.3\lib\netstandard2.0\ChannelAdam.Soap.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyTabs, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EasyTabs.1.3.3.0\lib\net40\EasyTabs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IQToolkit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LinqToWiki.Core.1.3\lib\net40-client\IQToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqToWiki.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LinqToWiki.Core.1.3\lib\net40-client\LinqToWiki.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqToWiki.Generated, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LinqToWiki.1.5\lib\net40-client\LinqToWiki.Generated.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MediaWiki.NET, Version=1.0.0.0, Culture=neutral, PublicKeyToken=595f0c3c92126b75, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MediaWiki.NET.1.0.0\lib\net45\MediaWiki.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EasyTabs.1.3.3.0\lib\net40\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EasyTabs.1.3.3.0\lib\net40\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.1.0\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.5.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Droid_Database.1.0.3\lib\4.0\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.5.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=3.5.8.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tools.Utilities.UI.1.0.23\lib\4.6.1\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tools.Utilities, Version=1.0.23.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tools.Utilities.1.0.23\lib\net461\Tools.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Tools.Utilities.UI, Version=1.0.11.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Tools.Utilities.UI.1.0.23\lib\4.6.1\Tools.Utilities.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.Dwmapi, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Dwmapi.1.0.1\lib\Win32Interop.Dwmapi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Win32Interop.Gdi32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Gdi32.1.0.1\lib\Win32Interop.Gdi32.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Win32Interop.Kernel32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Kernel32.1.0.1\lib\Win32Interop.Kernel32.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Win32Interop.User32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.User32.1.0.1\lib\Win32Interop.User32.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Win32Interop.Uxtheme, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Win32Interop.Uxtheme.1.0.1\lib\Win32Interop.Uxtheme.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InterfaceWeb.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Web.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TS_Web.Designer.cs">
+      <DependentUpon>TS_Web.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlTest.Designer.cs">
+      <DependentUpon>UserControlTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AppContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AppContainer.Designer.cs">
+      <DependentUpon>AppContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DroidWebBrowserPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DroidWebBrowserPage.Designer.cs">
+      <DependentUpon>DroidWebBrowserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WebBrowserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\WebBrowserControl.Designer.cs">
+      <DependentUpon>WebBrowserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WebBrowserForm.Designer.cs">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PanelNetwork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PanelNetwork.Designer.cs">
+      <DependentUpon>PanelNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ToolStripMenuWEB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\ViewNetwork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewNetwork.Designer.cs">
+      <DependentUpon>ViewNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewIAWebBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewIAWebBrowser.Designer.cs">
+      <DependentUpon>ViewIAWebBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WebBrowserPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\WebBrowserPage.Designer.cs">
+      <DependentUpon>WebBrowserPage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="TobiAppliKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TS_Web.resx">
+      <DependentUpon>TS_Web.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DroidWebBrowserPage.resx">
+      <DependentUpon>DroidWebBrowserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WebBrowserControl.resx">
+      <DependentUpon>WebBrowserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WebBrowserForm.resx">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PanelNetwork.resx">
+      <DependentUpon>PanelNetwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewNetwork.resx">
+      <DependentUpon>ViewNetwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WebBrowserPage.resx">
+      <DependentUpon>WebBrowserPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShieldTileBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher.png" />
+    <None Include="Resources\IconServo.ico" />
+    <None Include="Resources\BackActive.png" />
+    <None Include="Resources\BookmarksActive.png" />
+    <None Include="Resources\Border.png" />
+    <None Include="Resources\ButtonHoverBackground.png" />
+    <None Include="Resources\CloseActive.png" />
+    <None Include="Resources\ForwardActive.png" />
+    <None Include="Resources\ToolbarBackground.png" />
+    <None Include="Resources\ToolsActive.png" />
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+    <Content Include="Scripts\ScriptDropDown.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Droid.Web\Droid.Web.csproj">
+      <Project>{a7dcd323-f7d3-492c-9c40-f6b3a5292a6f}</Project>
+      <Name>Droid.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.3.3497.1841\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.3.3497.1841\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.3.3497.1841\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.3.3497.1841\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets" Condition="Exists('..\..\packages\CefSharp.Common.63.0.3\build\CefSharp.Common.targets')" />
+  <Import Project="..\..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets" Condition="Exists('..\..\packages\CefSharp.WinForms.63.0.3\build\CefSharp.WinForms.targets')" />
+  <Import Project="..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.69.0.0\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.69.0.0\build\CefSharp.WinForms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
