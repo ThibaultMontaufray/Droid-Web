@@ -2,19 +2,21 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
-    <Version>1.0.5</Version>
+    <Version>1.0.7</Version>
     <Authors>Thibault MONTAUFRAY</Authors>
     <Company>Servodroid</Company>
     <Description>Format your .net object to be displayed on web. There is also a little web research tool, but not very efficient.</Description>
     <Copyright>Copyright 2015 - 2019</Copyright>
     <PackageIconUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools/master/Tools.Data/servodroidIconColor.png</PackageIconUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools/Tools.Data/master/License</PackageLicenseUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools/master/Tools.Data/License</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/ThibaultMontaufray/Droid-Web</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ThibaultMontaufray/Droid-Web</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <PackageTags>Servodroid web formating research</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.0.6.0</AssemblyVersion>
+    <FileVersion>1.0.6.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,7 +37,7 @@
 
   <ItemGroup>
     <PackageReference Include="LinqToWiki" Version="1.5.0" />
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
